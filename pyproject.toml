@@ -1,0 +1,19 @@
+[project]
+name = "elgato-keylight-controller"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13.1"
+dependencies = [
+    "ahk>=1.8.4",
+    "elgato-keylight-controller",
+    "elgato>=5.1.2",
+    "pydantic>=2.11.7",
+    "pyyaml>=6.0.2",
+]
+
+[tool.uv]
+package = true
+
+[project.scripts]
+start = "elgato_keylight_controller.main:start"

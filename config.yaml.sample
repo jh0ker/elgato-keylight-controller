@@ -1,0 +1,31 @@
+lights:
+  - name: "Left" # Names are optional
+    ip: "192.168.178.28"
+  - name: "Right"
+    ip: "192.168.178.29"
+
+# Use AHK notation for hotkeys
+hotkeys:
+  # Toggles the lights on/off
+  - key: "+!F23"
+    action: "toggle"
+
+  # Gets the status of the first light and syncs all other lights' states to it
+  - key: "^+!F23"
+    action: "sync"
+
+  # Exits the program
+  - key: "^+!Esc"
+    action: "stop"
+
+  # Control the brightness of the lights
+  - key: "F23"
+    action: "brightness_down"
+  - key: "F24"
+    action: "brightness_up"
+
+  # Control the color temperature of the lights
+  - key: "^F23"
+    action: "temperature_down"
+  - key: "^F24"
+    action: "temperature_up"
