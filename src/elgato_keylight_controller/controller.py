@@ -30,7 +30,11 @@ def start():
         started.set()
 
         while True:
-            stop_received = await process_next()
+            try:
+                stop_received = await process_next()
+            except Exception as e:
+                print(f"Error: {e}")
+                continue
 
             if stop_received:
                 break
